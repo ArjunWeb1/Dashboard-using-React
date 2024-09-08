@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Common styles */
+.custom-card {
+  border: 1px solid rgba(38, 96, 96, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  padding: 20px;
+  background: linear-gradient(135deg, #f6f8f9, #eef2f3);
+  margin-top: 40px;
+  bottom: 20px;
+}
+
+.custom-title {
+  text-align: center;
+  font-size: 1.75rem;
+  color: #4bc0c0;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.custom-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 30px;
+}
+
+.animated-heading {
+  margin-top: 20px;
+  animation: fadeInUp 0.7s ease-in-out;
+  color: #333;
+}
+
+.animated-paragraph {
+  animation: fadeInUp 0.8s ease-in-out;
+  font-size: 1rem;
+  color: #555;
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+.custom-blockquote {
+  border-left: 4px solid #4bc0c0;
+  padding-left: 15px;
+  color: #4bc0c0;
+  font-style: italic;
+  margin: 20px 0;
+  position: relative;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.custom-blockquote::before {
+  content: open-quote;
+  font-size: 3rem;
+  color: #4bc0c0;
+  position: absolute;
+  left: -25px;
+  top: -10px;
+}
+
+.muted-text, .primary-text, .info-text, .success-text, .warning-text, .danger-text {
+  margin: 10px 0;
+  animation: fadeInUp 0.9s ease-in-out;
+}
+
+.muted-text {
+  color: #6c757d;
+  font-style: italic;
+}
+
+.primary-text {
+  color: #007bff;
+  font-weight: 600;
+}
+
+.info-text {
+  color: #17a2b8;
+  font-weight: 600;
+}
+
+.success-text {
+  color: #28a745;
+  font-weight: 600;
+}
+
+.warning-text {
+  color: #ffc107;
+  font-weight: 600;
+}
+
+.danger-text {
+  color: #dc3545;
+  font-weight: 600;
+}
+
+.text {
+  font-size: 0.9rem;
+}
+
+/* Dark Mode Styles */
+.dark-mode .custom-card {
+  background: linear-gradient(135deg, #1c1c1c, #2c2c2c);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .custom-title,
+.dark-mode .custom-subtitle,
+.dark-mode .animated-heading,
+.dark-mode .animated-paragraph,
+.dark-mode .muted-text{
+  color: #fff; /* White text color for dark mode */
+}
+
+.dark-mode .custom-blockquote {
+  border-left: 4px solid #4bc0c0;
+}
+
+.dark-mode .animated-paragraph {
+  color: #ddd;
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

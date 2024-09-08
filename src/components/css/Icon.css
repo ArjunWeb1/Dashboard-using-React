@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Common styles */
+.custom-card {
+  border: none;
+  border-radius: 12px;
+  padding: 20px;
+  background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 20%, transparent 40%);
+  animation: backgroundAnimation 10s linear infinite;
+  z-index: 0;
+}
+
+.custom-title {
+  font-size: 1.75rem;
+  color: #4bc0c0;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.icon-examples {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  border-radius: 10px;
+  border: 0.5px solid black;
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+}
+
+.icon-item:hover {
+  transform: scale(1.2) rotate(10deg);
+}
+
+.icon-item p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.icon-item .icon {
+  color: #333; /* Default color for icons */
+  transition: color 0.3s ease;
+}
+
+/* Dark Mode Styles */
+.dark-mode .custom-card {
+  background: linear-gradient(135deg, #2c2c2c, #1c1c1c);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .custom-card::before {
+  background: radial-gradient(circle, rgba(0,0,0,0.2) 20%, transparent 40%);
+}
+
+.dark-mode .custom-title {
+  color: #4bc0c0;
+}
+
+.dark-mode .icon-item {
+  border: 0.5px solid #555;
+}
+
+.dark-mode .icon-item p {
+  color: #ddd;
+}
+
+.dark-mode .icon-item .icon {
+  color: #fff; /* Icon color in dark mode */
+}
+
+.dark-mode .icon-coffee:hover .icon { color: #6f4f28; }
+.dark-mode .icon-star:hover .icon { color: #ffd700; }
+.dark-mode .icon-home:hover .icon { color: #ff6f61; }
+.dark-mode .icon-user:hover .icon { color: #4f5d75; }
+.dark-mode .icon-cog:hover .icon { color: #333; }
+.dark-mode .icon-heart:hover .icon { color: #e74c3c; }
+.dark-mode .icon-bell:hover .icon { color: #f39c12; }
+.dark-mode .icon-envelope:hover .icon { color: #3498db; }
+.dark-mode .icon-map-marker:hover .icon { color: #2ecc71; }
+.dark-mode .icon-camera:hover .icon { color: #9b59b6; }
+.dark-mode .icon-music:hover .icon { color: #e67e22; }
+.dark-mode .icon-facebook:hover .icon { color: #3b5998; }
+.dark-mode .icon-twitter:hover .icon { color: #1da1f2; }
+.dark-mode .icon-instagram:hover .icon { color: #e4405f; }
+.dark-mode .icon-linkedin:hover .icon { color: #0077b5; }
+.dark-mode .icon-github:hover .icon { color: #333; }
+
+/* Light Mode Styles */
+.light-mode .custom-card {
+  background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .custom-card::before {
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 20%, transparent 40%);
+}
+
+.light-mode .custom-title {
+  color: #4bc0c0;
+}
+
+.light-mode .icon-item {
+  border: 0.5px solid black;
+}
+
+.light-mode .icon-item p {
+  color: #333;
+}
+
+.light-mode .icon-item .icon {
+  color: #333; /* Icon color in light mode */
+}
+
+.light-mode .icon-coffee:hover .icon { color: #6f4f28; }
+.light-mode .icon-star:hover .icon { color: #ffd700; }
+.light-mode .icon-home:hover .icon { color: #ff6f61; }
+.light-mode .icon-user:hover .icon { color: #4f5d75; }
+.light-mode .icon-cog:hover .icon { color: #333; }
+.light-mode .icon-heart:hover .icon { color: #e74c3c; }
+.light-mode .icon-bell:hover .icon { color: #f39c12; }
+.light-mode .icon-envelope:hover .icon { color: #3498db; }
+.light-mode .icon-map-marker:hover .icon { color: #2ecc71; }
+.light-mode .icon-camera:hover .icon { color: #9b59b6; }
+.light-mode .icon-music:hover .icon { color: #e67e22; }
+.light-mode .icon-facebook:hover .icon { color: #3b5998; }
+.light-mode .icon-twitter:hover .icon { color: #1da1f2; }
+.light-mode .icon-instagram:hover .icon { color: #e4405f; }
+.light-mode .icon-linkedin:hover .icon { color: #0077b5; }
+.light-mode .icon-github:hover .icon { color: #333; }
+
+@keyframes backgroundAnimation {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.5;
+  }
+}

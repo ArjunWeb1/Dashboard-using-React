@@ -1,0 +1,119 @@
+/* Base Styles */
+.custom-notifications-card {
+  border: none;
+  border-radius: 12px;
+  padding: 20px;
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.custom-notifications-title {
+  font-size: 1.75rem;
+  color: #007bff;
+}
+
+.custom-notifications-info {
+  font-size: 0.875rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.custom-notification-item {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.05);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.custom-notification-item:hover {
+  background: rgba(0, 0, 0, 0.1);
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+.custom-notification-item:nth-child(odd) {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.custom-notification-item div {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.custom-notification-item span {
+  color: #333;
+}
+
+.custom-notification-item small {
+  color: #888;
+}
+
+.notification-buttons .row {
+  margin-bottom: 1.5rem;
+}
+
+.notification-buttons h1, .notification-buttons h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.notification-buttons p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.notification-buttons .btn {
+  margin-bottom: 0.5rem;
+}
+
+/* Dark Mode Styles */
+.dark-mode .custom-notifications-card {
+  background: linear-gradient(135deg, #333, #222);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+.dark-mode .modal-content{
+  color: black;
+}
+
+.dark-mode .custom-notifications-title {
+  color: #1e90ff;
+}
+
+.dark-mode .custom-notifications-info {
+  color: #ddd;
+}
+
+.dark-mode .custom-notification-item {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .custom-notification-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .custom-notification-item span {
+  color: #fff;
+}
+
+.dark-mode .custom-notification-item small {
+  color: #bbb;
+}
+
+.dark-mode .notification-buttons h1, 
+.dark-mode .notification-buttons h2 {
+  color: #fff;
+}
+
+.dark-mode .notification-buttons p {
+  color: #ccc;
+}
+
+.dark-mode .notification-buttons .btn {
+  border-color: #555;
+  color: #fff;
+}
+

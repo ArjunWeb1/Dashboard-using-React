@@ -1,0 +1,174 @@
+@keyframes cardHoverEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes buttonPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.3);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 86, 179, 0.5);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.3);
+  }
+}
+
+@keyframes textSlideIn {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.user-profile-card {
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  animation: gradientBackground 10s infinite;
+}
+
+.user-profile-card:hover {
+  animation: cardHoverEffect 0.5s forwards;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.user-profile-card .bgImage {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  transition: transform 0.3s;
+  border-radius: 50%;
+}
+
+.user-profile-card:hover .bgImage {
+  transform: scale(1.1) rotate(3deg);
+}
+
+.user-profile-card .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: #f9f9f9;
+  animation: textSlideIn 1s forwards;
+}
+
+.user-profile-card .card-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.user-profile-card .card-subtitle {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.user-profile-card .card-text {
+  font-size: 0.9rem;
+  color: #555;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.user-profile-card .card-text.bio {
+  max-height: 0;
+  opacity: 0;
+}
+
+.user-profile-card .card-text.bio.show {
+  max-height: 500px; 
+  opacity: 1;
+}
+
+.user-profile-card button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-profile-card button:hover {
+  background-color: #0056b3;
+  animation: buttonPulse 0.5s;
+}
+
+.dark-mode .user-profile-card {
+  background-color: #000000; /* Black background color for dark mode */
+  color: #ffffff; /* White text color for dark mode */
+}
+
+.dark-mode .user-profile-card .bgImage {
+  border: 2px solid #444;
+}
+
+.dark-mode .user-profile-card .card-title,
+.dark-mode .user-profile-card .card-subtitle,
+.dark-mode .user-profile-card .card-text {
+  color: #ffffff; /* White text color for dark mode */
+}
+
+.dark-mode .user-profile-card button {
+  background-color: #76d7c4; /* Light blue for dark mode */
+  color: #333;
+}
+.dark-mode .card-body{
+  background: #1c1c1c; 
+}
+.dark-mode .user-profile-card button:hover {
+  background-color: #5c9a9a; /* Darker blue for hover in dark mode */
+}
+
+.light-mode .user-profile-card {
+  background-color: #ffffff; /* Light background color for light mode */
+  color: #333; /* Dark text color for light mode */
+}
+
+.light-mode .user-profile-card .bgImage {
+  border: 2px solid #f8f9fa;
+}
+
+.light-mode .user-profile-card .card-body {
+  background: #f9f9f9;
+}
+
+.light-mode .user-profile-card .card-title,
+.light-mode .user-profile-card .card-subtitle,
+.light-mode .user-profile-card .card-text {
+  color: #333;
+}
+
+.light-mode .user-profile-card button {
+  background-color: #007bff;
+  color: white;
+}
+
+.light-mode .user-profile-card button:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,157 @@
+/* Card hover effect */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect for card body content */
+.card-body-hover {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.card-body-hover:hover .card-title,
+.card-body-hover:hover .card-text {
+  transform: translateY(-5px);
+  color: #007bff; /* Example hover color */
+}
+
+/* Optional: Additional styling for icons */
+.icon-blue {
+  color: #007bff; /* Bootstrap primary color */
+}
+
+.icon-red {
+  color: #dc3545; /* Bootstrap danger color */
+}
+
+.icon-warning {
+  color: #ffc107; /* Bootstrap warning color */
+}
+
+/* Card body padding */
+.card-body {
+  padding: 1.5rem;
+}
+
+/* Card title and text */
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1rem;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #343a40;
+  color: #f8f9fa;
+}
+.dark-mode .card-body-hover .card-title,.dark-mode .card-text{
+  color: white;
+}
+
+.dark-mode .card-body-hover:hover .card-title,
+.dark-mode .card-body-hover:hover .card-text {
+  color: #0d6efd; /* Dark mode hover color */
+}
+
+.dark-mode .card-hover:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .icon-blue {
+  color: #76d7c4; /* Light blue for dark mode */
+}
+
+.dark-mode .icon-red {
+  color: #ff6f61; /* Light red for dark mode */
+}
+
+.dark-mode .icon-warning {
+  color: #ffc107; /* Warning color stays the same */
+}
+
+/* Light Mode Styles */
+.light-mode {
+  /* background-color: #f8f9fa; */
+  color: #333;
+}
+
+.light-mode .card-body-hover {
+  /* background-color: #ffffff; */
+  color: #333;
+}
+
+.light-mode .card-body-hover:hover .card-title,
+.light-mode .card-body-hover:hover .card-text {
+  color: #007bff; /* Light mode hover color */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .card-body {
+    padding: 1.25rem;
+  }
+
+  .card-title {
+    font-size: 1.15rem;
+  }
+
+  .card-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .card-body {
+    padding: 1rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-body {
+    padding: 0.75rem;
+  }
+  .col-md-8, .col-md-4 {
+    width: 100%;
+  }
+  .card-title {
+    font-size: 0.9rem;
+  }
+
+  .card-text {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-body {
+    padding: 0.5rem;
+  }
+
+  .card-title {
+    font-size: 0.85rem;
+  }
+
+  .card-text {
+    font-size: 0.8rem;
+  }
+  .row > * {
+    width: 100%;
+  }
+}

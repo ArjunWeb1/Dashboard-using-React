@@ -1,0 +1,156 @@
+@keyframes softGradient {
+  0% {
+    background: linear-gradient(120deg, #6e8efb, #a777e3);
+  }
+  50% {
+    background: linear-gradient(120deg, #a777e3, #6e8efb);
+  }
+  100% {
+    background: linear-gradient(120deg, #6e8efb, #a777e3);
+  }
+}
+
+.navbar-custom {
+  background: linear-gradient(120deg, #6e8efb, #a777e3); /* Soft gradient colors */
+  background-size: 200% 200%;
+  animation: softGradient 12s ease infinite;
+  backdrop-filter: blur(10px); /* Maintain blur effect */
+  border-radius: 4px;
+  padding: 10px;
+  position: relative;
+  color: #ffffff;
+}
+
+.navbar-collapse {
+  flex-basis: 100%;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+}
+
+.ml-auto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: space-between;
+}
+
+.navbar-brand h2 {
+  color: #ffffff;
+}
+
+.search-container {
+  position: relative;
+  width: 300px;
+  margin-right: 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 20px 10px 40px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+}
+
+.search-input::placeholder {
+  color: #ccc;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  color: #c2bfbf; /* Color of the search icon */
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #ffffff; /* Color of the icons and links */
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #007bff; /* Hover color */
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  color: #ffffff; /* Color of the dropdown toggle icon */
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1050; /* Ensure dropdown is on top */
+}
+
+.dropdown-menu.show {
+  display: block;
+  margin-left: -92px;
+}
+
+.dropdown-item {
+  color: #343a40; /* Color of the text inside dropdown */
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+  color: #007bff; /* Hover color of the dropdown item text */
+}
+
+.dropdown-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #343a40;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Header.css */
+
+.theme-toggle-btn {
+  padding: 8px 16px;
+  margin-left: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid currentColor;
+  border-radius: 5px;
+  color: inherit;
+}
+
+.theme-toggle-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}

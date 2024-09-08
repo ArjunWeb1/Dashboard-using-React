@@ -1,0 +1,54 @@
+.App {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  
+}
+.header{
+  background-color: red;
+}
+
+.sidebar .nav-link {
+  color: white;
+  margin: 10px 0;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 250px;
+  line-height: 20px;
+  padding: 20px;
+}
+
+.content {
+  margin-top: 20px;
+}
+
+/* App.css */
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode .header {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .main-content {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .sidebar {
+  background-color: #242424;
+}
+
+body.dark-mode .card {
+  background-color: #2c2c2c;
+  color: #ffffff;
+}
+
+/* Add more styles as needed */

@@ -1,0 +1,114 @@
+/* Base Styles */
+.custom-card {
+  border: 1px solid rgba(38, 96, 96, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  bottom: 20px;
+}
+
+.custom-title {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #4bc0c0;
+  margin-bottom: 20px;
+}
+
+.custom-table {
+  margin-top: 20px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.table-row {
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.table-row:hover {
+  background-color: rgba(75, 192, 192, 0.2);
+  transform: scale(1.02);
+}
+
+.table-row td {
+  text-align: center;
+}
+
+th {
+  background-color: #4bc0c0;
+  color: #262626;
+}
+
+th, td {
+  padding: 15px;
+}
+
+/* Button with Icons */
+.button-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 5px;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.button-icon i {
+  transition: color 0.3s ease;
+}
+
+.button-edit {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button-edit:hover {
+  transform: scale(1.05);
+}
+
+.button-delete {
+  background: linear-gradient(135deg, #dc3545, #c82333);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button-delete:hover {
+  transform: scale(1.05);
+}
+
+/* Dark Mode Styles */
+.dark-mode .custom-card {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  background: #2c2c2c;
+}
+
+.dark-mode .custom-title {
+  color: #1e90ff;
+}
+
+.dark-mode .custom-table {
+  color: #e0e0e0;
+}
+
+.dark-mode .table-row:hover {
+  background-color: rgba(50, 150, 150, 0.3);
+}
+
+.dark-mode th {
+  background-color: #1e90ff;
+  color: #f8f9fa;
+}
+
+.dark-mode .button-edit {
+  background: linear-gradient(135deg, #0056b3, #003d7a);
+}
+
+.dark-mode .button-delete {
+  background: linear-gradient(135deg, #c82333, #a71d2a);
+}
